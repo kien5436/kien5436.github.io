@@ -1,0 +1,35 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+  background: 0 0 / cover no-repeat url(images/david-schultz-SrewPUfo2c0-unsplash.jpg);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: background .2s;
+}
+
+.box.is-shadowless {
+  border: 1px solid transparent;
+  transition: .3s;
+  height: 100%;
+}
+
+.box.is-shadowless:hover,
+.box.is-shadowless:active,
+.box.is-shadowless:focus-visible {
+  border-color: hsl(0, 0%, 21%);
+  transform: scale(1.1);
+}
+
+.is-capitalized-first-letter::first-letter {
+  text-transform: capitalize;
+}

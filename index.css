@@ -33,3 +33,14 @@ body {
 .is-capitalized-first-letter::first-letter {
   text-transform: capitalize;
 }
+
+@media screen and (max-width: 768px) {
+  .px-3-mobile {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  .content li {
+    word-break: break-word;
+  }
+}

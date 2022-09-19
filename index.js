@@ -93,7 +93,7 @@ function styleNavbar() {
 
   const navbar = document.querySelector('.navbar');
 
-  if (window.scrollY >= window.innerHeight) {
+  if (window.scrollY >= window.innerHeight - 80) {
 
     navbar.style.setProperty('background', '#363636', 'important');
   }

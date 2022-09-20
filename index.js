@@ -3,18 +3,22 @@ let i18n = null;
 window.addEventListener('load',  async () => {
 
   await fetchContent();
-
   styleNavbar();
   renderLanguage();
+  greet();
   navbarEvents();
 
 }, false);
 
 window.addEventListener('scroll', debounce(styleNavbar, 150), false);
 
-function renderLanguage() {
+function getLanguage(preferUserLanguage = true) {
+  return preferUserLanguage ? navigator.language : document.documentElement.getAttribute('lang');
+}
 
-  const lang = document.documentElement.getAttribute('lang');
+function renderLanguage(preferUserLanguage = true) {
+
+  const lang = getLanguage(preferUserLanguage);
   const i18nEls = document.querySelectorAll('[data-i18n]');
 
   for (let i = 0; i < i18nEls.length; i++) {
@@ -40,7 +44,8 @@ function navbarEvents() {
     el.addEventListener('click', () => {
 
       document.documentElement.setAttribute('lang', el.dataset.lang);
-      renderLanguage();
+      renderLanguage(false);
+      greet();
     }, false);
   });
 }
@@ -100,4 +105,13 @@ function styleNavbar() {
   else {
     navbar.style.setProperty('background', 'none');
   }
+}
+
+function greet() {
+
+  const greetEl = document.getElementById('greeting');
+
+  greetEl.classList.add('greeting');
+
+  setTimeout(() => greetEl.classList.remove('greeting'), 3000);
 }

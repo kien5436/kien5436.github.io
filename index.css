@@ -34,6 +34,33 @@ body {
   text-transform: capitalize;
 }
 
+.greeting {
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  animation: typing 3s steps(30, end), blink .5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #fff;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .px-3-mobile {
     padding-left: 0.75rem !important;
@@ -42,5 +69,9 @@ body {
 
   .content li {
     word-break: break-word;
+  }
+
+  #greeting {
+    font-size: 1.5rem;
   }
 }

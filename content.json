@@ -20,7 +20,7 @@
     "skillsSubtitle2": "Others",
     "portfolio3": "Face recognition",
     "portfolio4": "Eng-Vie dictionary",
-    "greeting": "Hello, I am Phạm Trung Kiên",
+    "greeting": "{time}, I am Phạm Trung Kiên",
     "timelineNow": "Now",
     "expSamsung": "Engineer at SAMSUNG VIETNAM MOBILE R&D CENTER",
     "expSamsungIntern": "Intern at SAMSUNG VIETNAM MOBILE R&D CENTER",
@@ -28,7 +28,10 @@
     "exp5Chau": "Web developer at 5 CHÂU MEDIA COMPANY",
     "expSTP": "Win Samsung talent program prize",
     "expUniversityStart": "Start going to THAI NGUYEN UNIVERSITY OF INFORMATION AND COMMUNICATION TECHNOLOGY",
-    "expUniversityEnd": "Graduated with a Good degree at THAI NGUYEN UNIVERSITY OF INFORMATION AND COMMUNICATION TECHNOLOGY"
+    "expUniversityEnd": "Graduated with a Good degree at THAI NGUYEN UNIVERSITY OF INFORMATION AND COMMUNICATION TECHNOLOGY",
+    "goodMorning": "Good morning",
+    "goodAfternoon": "Good afternoon",
+    "goodNight": "Good night"
   },
   "vi": {
     "brand": "CV của tôi",
@@ -51,7 +54,7 @@
     "skillsSubtitle2": "Một số kĩ năng khác",
     "portfolio3": "Nhận diện khuôn mặt",
     "portfolio4": "Từ điển Anh-Việt",
-    "greeting": "Xin chào, tôi là Phạm Trung Kiên",
+    "greeting": "{time}, tôi là Phạm Trung Kiên",
     "timelineNow": "Hiện tại",
     "expSamsung": "Kĩ sư tại SAMSUNG VIETNAM MOBILE R&D CENTER",
     "expSamsungIntern": "Thực tập sinh tại SAMSUNG VIETNAM MOBILE R&D CENTER",
@@ -59,6 +62,9 @@
     "exp5Chau": "Lập trình web tại 5 CHÂU MEDIA COMPANY",
     "expSTP": "Giành giải thưởng Học bổng tài năng Samsung",
     "expUniversityStart": "Bắt đầu học tại THAI NGUYEN UNIVERSITY OF INFORMATION AND COMMUNICATION TECHNOLOGY",
-    "expUniversityEnd": "Tốt nghiệp loại Giỏi tại THAI NGUYEN UNIVERSITY OF INFORMATION AND COMMUNICATION TECHNOLOGY"
+    "expUniversityEnd": "Tốt nghiệp loại Giỏi tại THAI NGUYEN UNIVERSITY OF INFORMATION AND COMMUNICATION TECHNOLOGY",
+    "goodMorning": "Chào buổi sáng",
+    "goodAfternoon": "Chào buổi chiều",
+    "goodNight": "Chào buổi tối"
   }
 }

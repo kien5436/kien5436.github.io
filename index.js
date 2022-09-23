@@ -70,10 +70,6 @@ async function fetchContent() {
   const res = await fetch('/content.json');
   i18n = await res.json();
 
-  const year = new Date().getFullYear();
-  const age = year - 1997;
-  const expYears = year - 2017;
-
   for (const lang in i18n) {
 
     if (i18n.hasOwnProperty(lang)) {
@@ -86,7 +82,28 @@ async function fetchContent() {
 
           if ('aboutDescription' === key) {
 
+            const year = new Date().getFullYear();
+            const age = year - 1997;
+            const expYears = year - 2017;
+
             dict[key] = dict[key].replace('{age}', age).replace('{expYears}', expYears);
+          }
+          else if ('greeting' === key) {
+
+            const hour = (new Date()).getHours();
+            let time = null;
+
+            if (time >= 5 && time < 12) {
+              time = dict.goodMorning;
+            }
+            else if (time >= 12 && time < 6) {
+              time = dict.goodAfternoon;
+            }
+            else {
+              time = dict.goodNight;
+            }
+
+            dict[key] = dict[key].replace('{time}', time);
           }
         }
       }

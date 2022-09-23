@@ -1,0 +1,212 @@
+include mixins.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width initial-scale=1.0")
+    meta(name="description" content="Welcome to my CV")
+    title Phạm Trung Kiên's CV
+    link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href="node_modules/bulma/css/bulma.min.css")
+    link(rel="stylesheet" href="node_modules/bulma-timeline/dist/css/bulma-timeline.min.css")
+    link(rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css")
+    link(rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css")
+    link(rel="stylesheet" href="index.css")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet")
+  body
+    section.hero.is-fullheight
+      .hero-head.is-size-7
+        nav.navbar.is-dark
+          .container
+            .navbar-brand
+              a.navbar-item(href="#")
+                i.fa-brands.fa-github-alt
+                span.ml-2(data-i18n="brand")
+              span.navbar-burger(role="button" aria-label="menu" aria-expanded="false")
+                - for (let i = 0; i < 3; i++)
+                  span(aria-hidden="true")
+            #navbarMenu.navbar-menu
+              .navbar-end
+                - const sections = ['about', 'skills', 'portfolio', 'experience', 'contact']
+
+                each sect in sections
+                  a.navbar-item.is-uppercase(href=`#${sect}` data-i18n=sect)
+                .navbar-item.has-dropdown.is-hoverable
+                  a.navbar-link
+                    span.is-capitalized-first-letter(data-i18n="language")
+                  .navbar-dropdown
+                    p.navbar-item.is-capitalized.is-clickable(data-lang="en" data-i18n="english")
+                    p.navbar-item.is-capitalized.is-clickable(data-lang="vi" data-i18n="vietnamese")
+      .hero-body
+        .container.has-text-centered
+          .title.has-text-light.is-inline-flex.is-justify-content-center
+            p#greeting(data-i18n="greeting")
+          p.subtitle.has-text-light(data-i18n="shortDescription")
+          .buttons.is-justify-content-center
+            a.button.is-light.is-outlined(href="#contact" data-i18n="btnHire")
+            a.button.is-light.is-outlined(href="https://www.topcv.vn/xem-cv/WgZSUwcHVFQJA1JWAFxbUwMKUl8CVgJWBwBWUw1e12" data-i18n="btnDownload" target="_blank")
+
+    +section('about')
+      p.has-text-justify.px-3(data-i18n="aboutDescription")
+      +form_field('Email')
+        p kiendp00@gmail.com
+      +form_field('Website')
+        a(href="https://github.com/kien5436") https://github.com/kien5436
+      +form_field()(data-i18n="addressLabel")
+        p(data-i18n="address")
+
+    +section('skills')
+      p.subtitle.mt-0.has-text-centered(data-i18n="skillsSubtitle1")
+      .is-flex.is-justify-content-space-around.mb-5
+        -
+          const skills = [
+            {
+              name: 'Node.js',
+              icon_name: 'node-js',
+              icon_color: 'success-dark',
+            },
+            {
+              name: 'React',
+              icon_name: 'react',
+              icon_color: 'info',
+            },
+            {
+              name: 'Vue.js',
+              icon_name: 'vuejs',
+              icon_color: 'success',
+            },
+            {
+              name: 'Docker',
+              icon_name: 'docker',
+              icon_color: 'info',
+            },
+          ]
+
+        each skill in skills
+          +skill(skill)
+
+      p.subtitle.mt-0.has-text-centered(data-i18n="skillsSubtitle2")
+      .is-flex.is-justify-content-space-around.mb-4
+        -
+          const otherSkills = [
+            {
+              name: 'Laravel',
+              icon_name: 'laravel',
+              icon_color: 'danger',
+            },
+            {
+              name: 'Android',
+              icon_name: 'android',
+              icon_color: 'success',
+            },
+          ]
+
+        each skill in otherSkills
+          +skill(skill)
+
+    +section('portfolio')
+      -
+        const portfolios = [
+          {
+            name: 'webpack-express-generator',
+            link: 'https://www.npmjs.com/package/webpack-express-generator',
+            icon_name: 'npm',
+            icon_color: 'danger',
+          },
+          {
+            name: 'vue-nav-tab',
+            link: 'https://kien5436.github.io/vue-nav-tab/',
+            icon_name: 'npm',
+            icon_color: 'danger',
+          },
+          {
+            name: 'portfolio3',
+            link: 'https://github.com/kien5436/face-recognition',
+            icon_name: 'node-js',
+            icon_color: 'success-dark',
+            i18n: true,
+          },
+          {
+            name: 'portfolio4',
+            link: 'https://github.com/kien5436/instant-translator',
+            icon_name: 'android',
+            icon_color: 'success',
+            i18n: true,
+          },
+        ]
+
+      .p-3
+        .columns.is-multiline.is-mobile
+          each portfolio in portfolios
+            +portfolio(portfolio)
+
+    +section('experience')
+      .timeline.px-6.px-3-mobile
+        header.timeline-header
+          span.button.is-rounded.is-dark(data-i18n="timelineNow")
+
+        -
+          const exps = [
+            {
+              time: '01/2021',
+              exp: 'expSamsung',
+            },
+            {
+              time: '09/2020',
+              exp: 'expUniversityEnd',
+            },
+            {
+              time: '02/2020 - 07/2020',
+              exp: 'expSamsungIntern',
+            },
+            {
+              time: '06/2019',
+              exp: 'expSTP',
+            },
+            {
+              time: '03/2018 - 05/2019',
+              exp: 'expVNPTIntern',
+            },
+            {
+              time: '05/2017 - 09/2017',
+              exp: 'exp5Chau',
+            },
+            {
+              time: '08/2015',
+              exp: 'expUniversityStart',
+            },
+          ]
+
+        each item in exps
+          +timeline_item(item.time, item.exp)
+
+    +section('contact')
+      ul
+        -
+          const contacts = [
+            {
+              name: 'kiendp00@gmail.com',
+              link: 'mailto:kiendp00@gmail.com',
+              icon_name: 'google',
+              icon_color: 'danger',
+            },
+            {
+              name: 'https://t.me/kien5436',
+              link: 'https://t.me/kien5436',
+              icon_name: 'telegram',
+            },
+            {
+              name: 'https://fb.com/phamkien00',
+              link: 'https://www.facebook.com/phamkien00',
+              icon_name: 'facebook',
+              icon_color: 'link',
+            },
+          ]
+
+        each contact in contacts
+          +contact(contact)
+
+    script(src="index.js")

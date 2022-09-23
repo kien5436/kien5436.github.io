@@ -1,0 +1,47 @@
+mixin section(id)
+  section.section(id=id)
+    .container.is-max-desktop
+      .box.content
+        a.title.is-block.has-text-centered.is-capitalized-first-letter(href=`#${id}` data-i18n=`${id}${'about' === id ? 'Title' : ''}`)
+
+        block
+
+mixin form_field(label)
+  .field.is-horizontal
+    .field-label.is-normal.p-0
+      label.label&attributes(attributes)= label
+    .field-body
+      .field
+        .control
+          block
+
+mixin skill({name, icon_name, icon_color})
+  span.icon-text.is-flex-direction-column.is-align-items-center
+    span.icon.is-size-3.mb-3(class=`has-text-${icon_color}`)
+      i.fa-brands(class=`fa-${icon_name}`)
+    span= name
+
+mixin portfolio({name, link, icon_name, icon_color, i18n = false})
+  .column.is-half-mobile
+    a.box.is-shadowless.is-flex.is-justify-content-center.is-align-items-center(href=link target="_blank")
+      span.icon-text.is-flex-direction-column.is-align-items-center
+        span.icon.is-size-3.mb-3(class=`has-text-${icon_color}`)
+          i.fa-brands(class=`fa-${icon_name}`)
+        if i18n
+          span.has-text-centered.is-size-7-mobile(data-i18n=name)
+        else
+          span.has-text-centered.is-size-7-mobile= name
+
+mixin timeline_item(time, exp)
+  .timeline-item
+    .timeline-marker.is-dark
+    .timeline-content
+      p.heading= time
+      p(data-i18n=exp)
+
+mixin contact({name, link, icon_color, icon_name})
+  li
+    span.icon-text
+      span.icon(class=`has-text-${icon_color}`)
+        i.fa-brands(class=`fa-${icon_name}`)
+      a(href=link target='_blank')= name

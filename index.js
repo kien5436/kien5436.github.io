@@ -93,10 +93,10 @@ async function fetchContent() {
             const hour = (new Date()).getHours();
             let time = null;
 
-            if (time >= 5 && time < 12) {
+            if (hour >= 5 && hour < 12) {
               time = dict.goodMorning;
             }
-            else if (time >= 12 && time < 6) {
+            else if (hour >= 12 && hour < 18) {
               time = dict.goodAfternoon;
             }
             else {

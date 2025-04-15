@@ -1,0 +1,34 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Markdown files
+*.md text
+
+# HTML files
+*.html text
+
+# CSS files
+*.css text
+
+# JavaScript files
+*.js text
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+
+# Other binary files
+*.zip binary
+*.tar binary
+*.gz binary
+*.pdf binary
+
+# Ignore certain files from diffing
+*.min.js diff=javascript
+*.min.css diff=css
+
+# Custom attributes for Hugo
+# You can add more specific rules as needed

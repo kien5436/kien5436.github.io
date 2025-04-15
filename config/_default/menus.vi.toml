@@ -11,12 +11,12 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
- name = "Work"
+ name = "Chuyện nghề"
  pageRef = "work"
  weight = 10
 
 [[main]]
- name = "Random stuff"
+ name = "Chuyện linh tinh"
  pageRef = "random-stuff"
  weight = 20
 

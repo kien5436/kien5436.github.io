@@ -1,12 +1,12 @@
 disabled = false
-languageCode = "en"
-languageName = "English"
-weight = 2
+languageCode = "vi"
+languageName = "Vietnamese"
+weight = 1
 title = "Lơ lửng"
 
 [params]
-  displayName = "English"
-  isoCode = "en"
+  displayName = "Tiếng Việt"
+  isoCode = "vi"
   rtl = false
   dateFormat = "2 January 2006"
   logo = "img/logo.png"
@@ -19,7 +19,7 @@ title = "Lơ lửng"
   email = "kiendp00@gmail.com"
   image = "img/blowfish_logo.png"
   imageQuality = 96
-  headline = "A daydreamer"
+  headline = "Người trên mây"
   bio = ""
   links = [
     { email = "mailto:kiendp00@gmail.com" },

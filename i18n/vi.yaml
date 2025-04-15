@@ -1,2 +1,0 @@
-footer:
-  powered_by: "Cung cấp bởi {{ .Hugo }} &amp; {{ .Theme }}"

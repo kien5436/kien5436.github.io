@@ -11,7 +11,7 @@ title = "Lơ lửng"
   dateFormat = "2 January 2006"
   logo = "img/logo.png"
   secondaryLogo = "img/logo-contrast.png"
-  description = "Personal blog about a developer's life"
+  description = "Blog cá nhân về cuộc đời một lập trình viên"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]

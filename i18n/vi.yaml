@@ -1,2 +1,4 @@
+article:
+  part_of_series: "Bài viết này là một phần của loạt bài"
 footer:
   powered_by: "Cung cấp bởi {{ .Hugo }} &amp; {{ .Theme }}"
